@@ -22,9 +22,11 @@ namespace WebApplication2
             printDocument.PrintPage += new PrintPageEventHandler(PrintPage);
 
             // Specify the printer name (optional, defaults to default printer)
-//            printDocument.PrinterSettings.PrinterName = "HP17D9C3 (HP Officejet Pro 8600)";
-            printDocument.PrinterSettings.PrinterName = "Microsoft Print to PDF";
-           
+            //            printDocument.PrinterSettings.PrinterName = "HP17D9C3 (HP Officejet Pro 8600)";
+            printDocument.PrinterSettings.PrinterName = "ZDesigner GX420t";
+            //printDocument.PrinterSettings.PrinterName = "Microsoft Print to PDF";
+
+
 
             // Start the printing process
             try
@@ -43,7 +45,7 @@ namespace WebApplication2
             // Define what to print
             string textToPrint = "Hello, this is a test print!  Spanish: á, ñ, ¿";
             Font font = new Font("Arial", 12);
-            PointF point = new PointF(100, 400);
+            PointF point = new PointF(10, 200);
 
             // Draw the text on the page
             e.Graphics.DrawString(textToPrint, font, Brushes.Black, point);
